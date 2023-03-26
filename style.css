@@ -1,0 +1,43 @@
+.prueba {
+    border: 1px solid red;
+}
+
+/* variables */
+:root {
+    --padding: 1rem 1rem;
+    --borde: 1px solid lightgray;
+    --borde-radius: 5px;
+}
+
+/* main */
+.main {
+    /* posicionamiento */
+    padding: 2em 4em;
+}
+
+.row * {
+    padding: 0;
+}
+
+/* formulario */
+.formulario {
+    /* borde */
+    border: var(--borde);
+    border-radius: var(--borde-radius);
+}
+
+.formulario-titulo {
+    /* posicionamiento */
+    margin: 0;
+    padding: var(--padding);
+    /* borde */
+    border: var(--borde);
+    border-radius: var(--borde-radius);
+    /* texto */
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.formulario-contenido {
+    padding: var(--padding);
+}
