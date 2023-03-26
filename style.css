@@ -123,16 +123,19 @@ input {
     /* posicionamiento */
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
     gap: 1em;
     padding: 0.3em 1em;
     border: var(--borde);
     border-radius: var(--borde-radius);
     
     /* tamano */
-    width: auto;
+    width: fit-content;
+    block-size: fit-content;
 
     background-color: #6C757D;
 }
+
 
 .card-grupo {
     display: flex;
@@ -171,4 +174,8 @@ input {
 .submit-container {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+.card-container>*:last-child{
+    padding-right: 1em;
 }
