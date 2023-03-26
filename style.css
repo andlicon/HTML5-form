@@ -156,16 +156,6 @@ input {
     margin: 0;
 }
 
-/* querys */
-@media (max-width: 576px) {
-    .row fieldset+fieldset {
-        padding: 0;
-    }
-    .row>fieldset:first-child {
-        padding: 0;
-    }
-}
-
 .formulario-titulo {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -184,4 +174,34 @@ label {
     /* tamano */
     width: fit-content;
     block-size: fit-content;
+}
+
+/* alerta */
+.alerta {
+    padding: var(--padding);
+}
+
+.alerta-contenido {
+    /* posicionamiento */
+    display: block;
+    /* estilo */
+    border: var(--borde);
+    border-radius: var(--borde-radius);
+    /* tamano */
+    width: 100%;
+    padding: var(--padding);
+}
+
+legend {
+    margin-bottom: 0.7em;
+}
+
+/* querys */
+@media (max-width: 576px) {
+    .row fieldset+fieldset {
+        padding: 0;
+    }
+    .row>fieldset:first-child {
+        padding: 0;
+    }
 }
