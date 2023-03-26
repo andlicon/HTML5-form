@@ -179,3 +179,9 @@ input {
 .card-container>*:last-child{
     padding-right: 1em;
 }
+
+label {
+    /* tamano */
+    width: fit-content;
+    block-size: fit-content;
+}
