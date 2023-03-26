@@ -9,14 +9,31 @@
     --borde-radius: 5px;
 }
 
+/* generales */
+fieldset {
+    /* posicionamiento */
+    display: flex;
+    flex-flow: column nowrap;
+    /* estilo */
+    border: none;
+}
+
+.destacar {
+    font-weight: bold;
+}
+
+.row {
+    margin: 0;
+}
+
+.row .row>* {
+    padding: 0;
+}
+
 /* main */
 .main {
     /* posicionamiento */
     padding: 2em 4em;
-}
-
-.row * {
-    padding: 0;
 }
 
 /* formulario */
@@ -39,5 +56,35 @@
 }
 
 .formulario-contenido {
+    padding: var(--padding);
+}
+
+/* inputs */
+.amount-container {
+    /* posicionamiento */
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.amount-input{
+    /* tamano */
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+.simbolo {
+    /* tamano */
+    flex-basis: 1rem;
+    flex-grow: 0;
+}
+
+
+/* submit */
+.submit-container {
+    /* posicionamiento */
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em;
     padding: var(--padding);
 }
