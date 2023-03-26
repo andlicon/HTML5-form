@@ -4,9 +4,12 @@
 
 /* variables */
 :root {
-    --padding: 1rem 1rem;
+    /* bordes */
     --borde: 1px solid lightgray;
     --borde-radius: 5px;
+    /* padding */
+    --padding: 1rem 1rem;
+    --padding-inputs: 0.4em 0.5em;
 }
 
 /* generales */
@@ -26,8 +29,12 @@ fieldset {
     margin: 0;
 }
 
-.row .row>* {
-    padding: 0;
+.row *:first-child {
+    padding-left: 0;
+}
+
+.row *:last-child {
+    padding-right: 0;
 }
 
 /* main */
@@ -41,6 +48,7 @@ fieldset {
     /* borde */
     border: var(--borde);
     border-radius: var(--borde-radius);
+    padding: var(--padding);
 }
 
 .formulario-titulo {
@@ -79,6 +87,10 @@ fieldset {
     flex-grow: 0;
 }
 
+input {
+    padding: var(--padding-inputs);
+}
+
 
 /* submit */
 .submit-container {
@@ -87,4 +99,11 @@ fieldset {
     justify-content: flex-end;
     gap: 0.5em;
     padding: var(--padding);
+}
+
+/* querys */
+@media (max-width: 576px) {
+    .row .row>* {
+        padding: 0;
+    }
 }
