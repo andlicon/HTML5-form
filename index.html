@@ -17,7 +17,7 @@
 
 <body>
     <div class="main">
-        <form class="formulario needs-validation" action="#" method="POST">
+        <form class="formulario needs-validation" novalidate action="#" method="POST">
             <h1 class="h1 formulario-titulo bg-light">Payment form example</h1>
             <div class="alerta">
                 <span class="alerta-contenido text-danger-emphasis bg-danger">Some fields are missing</span>
@@ -27,17 +27,19 @@
                 <div class="row">
                     <fieldset class="col-12 col-sm-4">
                         <label for="cardNum" class="form-label">Card #</label>
-                        <input type="text" class="form-control" name="cardNum" id="cardNum" placeholder="XXXXXXXXXXXXXXXX" required/>
+                        <input type="text" maxlength="16" class="form-control" name="cardNum" id="cardNum"
+                            placeholder="XXXXXXXXXXXXXXXX" required />
                     </fieldset>
                     <fieldset class="col-12 col-sm-4">
                         <label for="cvcNum" class="form-label">CVC #</label>
-                        <input type="text" class="form-control" name="cvcNum" id="cvcNum" placeholder="0000" required>
+                        <input type="text" maxlength="4" class="form-control" name="cvcNum" id="cvcNum" placeholder="0000" required>
                     </fieldset>
                     <fieldset class="col-12 col-sm-4">
                         <label for="amount" class="form-label">Amount</label>
                         <div class="amount-container">
                             <span class="destacar centrado">$</span>
-                            <input class="amount-input form-control" type="text" name="amount" id="amount" placeholder="Amount" required>
+                            <input class="amount-input form-control" type="text" name="amount" id="amount"
+                                placeholder="Amount" required>
                         </div>
                     </fieldset>
                 </div>
@@ -47,7 +49,8 @@
                     <div class="col-6">
                         <fieldset>
                             <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First name" required>
+                            <input type="text" class="form-control" name="firstName" id="firstName"
+                                placeholder="First name" required>
                         </fieldset>
                         <fieldset>
                             <label for="city" class="form-label">City</label>
@@ -57,20 +60,25 @@
                             <legend>We accept:</legend>
                             <div class="card-container">
                                 <div class="card-grupo">
-                                    <input type="radio" class="form-check-input" name="card[]" id="mastercard" required checked/>
-                                    <label for="mastercard" class="form-label"><i class="fa-brands fa-cc-mastercard"></i></label>
+                                    <input type="radio" class="form-check-input" name="card[]" id="mastercard" required
+                                        checked />
+                                    <label for="mastercard" class="form-label"><i
+                                            class="fa-brands fa-cc-mastercard"></i></label>
                                 </div>
                                 <div class="card-grupo">
-                                    <input type="radio" class="form-check-input" name="card[]" id="visa" required/>
+                                    <input type="radio" class="form-check-input" name="card[]" id="visa" required />
                                     <label for="visa" class="form-label"><i class="fa-brands fa-cc-visa"></i></label>
                                 </div>
                                 <div class="card-grupo">
-                                    <input type="radio" class="form-check-input" name="card[]" id="dinersClub" required/>
-                                    <label for="dinersClub" class="form-label"><i class="fa-brands fa-cc-diners-club"></i></label>
+                                    <input type="radio" class="form-check-input" name="card[]" id="dinersClub"
+                                        required />
+                                    <label for="dinersClub" class="form-label"><i
+                                            class="fa-brands fa-cc-diners-club"></i></label>
                                 </div>
                                 <div class="card-grupo">
                                     <input type="radio" class="form-check-input" name="card[]" id="paypal" required>
-                                    <label for="paypal" class="form-label"><i class="fa-brands fa-cc-paypal"></i></label>
+                                    <label for="paypal" class="form-label"><i
+                                            class="fa-brands fa-cc-paypal"></i></label>
                                 </div>
                             </div>
                         </fieldset>
@@ -79,21 +87,49 @@
                     <div class="col-6">
                         <fieldset>
                             <label for="lastName" class="form-label">Last name</label>
-                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last name" required>
+                            <input type="text" class="form-control" name="lastName" id="lastName"
+                                placeholder="Last name" required>
                         </fieldset>
                         <div class="row">
                             <fieldset class="col-12 col-sm-6">
                                 <label for="state" class="form-label">State</label>
-                                <input type="text" class="form-control" name="state" id="state" placeholder="City" required>
+                                <select name="state" id="state" required>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Anzoategui">Anzoátegui</option>
+                                    <option value="Apure">Apure</option>
+                                    <option value="Aragua">Aragua</option>
+                                    <option value="Barinas">Barinas</option>
+                                    <option value="Bolivar">Bolívar</option>
+                                    <option value="Carabobo">Carabobo</option>
+                                    <option value="Cojedes">Cojedes</option>
+                                    <option value="DeltaAmacuro">Delta Amacuro</option>
+                                    <option value="DistritoFederal">Distrito Federal</option>
+                                    <option value="Falcon">Falcón</option>
+                                    <option value="Guarico">Guárico</option>
+                                    <option value="Lara">Lara</option>
+                                    <option value="Merida">Mérida</option>
+                                    <option value="Miranda">Miranda</option>
+                                    <option value="Monagas">Monagas</option>
+                                    <option value="NuevaEsparta">Nueva Esparta</option>
+                                    <option value="Portuguesa">Portuguesa</option>
+                                    <option value="sucre">sucre</option>
+                                    <option value="Tachira">Táchira</option>
+                                    <option value="Trujillo">Trujillo</option>
+                                    <option value="Vargas">Vargas</option>
+                                    <option value="Yaracuy">Yaracuy</option>
+                                    <option value="Zulia">Zulia</option>
+                                </select>
                             </fieldset>
                             <fieldset class="col-12 col-sm-6">
                                 <label for="postalCode" class="form-label">Postal Code</label>
-                                <input type="text" class="form-control" name="postalCode" id="postalCode" placeholder="City" required>
+                                <input type="text" class="form-control" name="postalCode" id="postalCode"
+                                    placeholder="City" required>
                             </fieldset>
                         </div>
                         <fieldset>
                             <label for="message" class="form-label">Message</label>
-                            <textarea name="message" class="form-control" id="message" cols="30" rows="10" required></textarea>
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="10"
+                                required></textarea>
                             <p class="nota">Add any notes here.</p>
                         </fieldset>
                     </div>
@@ -114,6 +150,28 @@
         crossorigin="anonymous"></script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/f50bb9c937.js" crossorigin="anonymous"></script>
+    <!-- bootstrap validation -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 
 </html>
