@@ -37,6 +37,10 @@ fieldset {
     padding-right: 0;
 }
 
+.nota {
+    color: grey;
+}
+
 /* main */
 .main {
     /* posicionamiento */
@@ -48,7 +52,6 @@ fieldset {
     /* borde */
     border: var(--borde);
     border-radius: var(--borde-radius);
-    padding: var(--padding);
 }
 
 .formulario-titulo {
@@ -99,11 +102,51 @@ input {
     justify-content: flex-end;
     gap: 0.5em;
     padding: var(--padding);
+    border: var(--borde);
+    border-radius: var(--borde-radius);
+}
+
+/* card */
+.card-container {
+    /* posicionamiento */
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    padding: 0.3em 1em;
+    border: var(--borde);
+    border-radius: var(--borde-radius);
+    
+    /* tamano */
+    width: auto;
+
+    background-color: #6C757D;
+}
+
+.card-grupo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.card-container label {
+    margin-bottom: 0;
+}
+
+#message {
+    resize: none;
+}
+
+.form-check-input {
+    margin: 0;
 }
 
 /* querys */
 @media (max-width: 576px) {
-    .row .row>* {
+    .row fieldset+fieldset {
+        padding: 0;
+    }
+    .row>fieldset:first-child {
         padding: 0;
     }
 }

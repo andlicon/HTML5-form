@@ -18,62 +18,82 @@
 <body>
     <div class="main">
         <h1 class="h1 formulario-titulo bg-light">Payment form example</h1>
-        <form class="formulario needs-validation" action="#">
-            <div class="row">
-                <fieldset class="col-12 col-sm-4">
-                    <label for="">Card #</label>
-                    <input type="text" name="" id="" placeholder="XXXXXXXXXXXXXXXX" required/>
-                </fieldset>
-                <fieldset class="col-12 col-sm-4">
-                    <label for="">CVC #</label>
-                    <input type="text" name="" id="" placeholder="0000" required>
-                </fieldset>
-                <fieldset class="col-12 col-sm-4">
-                    <label for="">Amount</label>
-                    <div class="">
-                        <span class="destacar">$</span>
-                        <input class="amount-input" type="text" name="" id="" placeholder="Amount" required>
-                    </div>
-                </fieldset>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <fieldset>
-                        <label for="">First Name</label>
-                        <input type="text" name="" id="" placeholder="First name" required>
+        <form class="formulario needs-validation" action="#" method="POST">
+            <!-- info card -->
+            <div class="formulario-contenido">
+                <div class="row">
+                    <fieldset class="col-12 col-sm-4">
+                        <label for="cardNum" class="form-label">Card #</label>
+                        <input type="text" class="form-control" name="cardNum" id="cardNum" placeholder="XXXXXXXXXXXXXXXX" required/>
                     </fieldset>
-                    <fieldset>
-                        <label for="">City</label>
-                        <input type="text" name="" id="" placeholder="City" required>
+                    <fieldset class="col-12 col-sm-4">
+                        <label for="cvcNum" class="form-label">CVC #</label>
+                        <input type="text" class="form-control" name="cvcNum" id="cvcNum" placeholder="0000" required>
                     </fieldset>
-                    <fieldset>
-                        <label for="">we accept</label>
-                        <input type="radio" name="" id="" required/>
-                        <label for="">we accept</label>
-                        <input type="radio" name="" id="" required/>
-                        <label for="">we accept</label>
-                        <input type="radio" name="" id="" required/>
+                    <fieldset class="col-12 col-sm-4">
+                        <label for="amount" class="form-label">Amount</label>
+                        <div class="">
+                            <span class="destacar">$</span>
+                            <input class="amount-input form-control" type="text" name="amount" id="amount" placeholder="Amount" required>
+                        </div>
                     </fieldset>
                 </div>
-                <div class="col-6">
-                    <fieldset>
-                        <label for="">Last name</label>
-                        <input type="text" name="" id="" placeholder="Last name" required>
-                    </fieldset>
-                    <div class="row">
-                        <fieldset class="col-12 col-sm-6">
-                            <label for="">State</label>
-                            <input type="text" name="" id="" placeholder="City" required>
+                <!-- cuerpo formulario -->
+                <div class="row">
+                    <!-- info lateral1 -->
+                    <div class="col-6">
+                        <fieldset>
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First name" required>
                         </fieldset>
-                        <fieldset class="col-12 col-sm-6">
-                            <label for="">Postal Code</label>
-                            <input type="text" name="" id="" placeholder="City" required>
+                        <fieldset>
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" name="city" id="city" placeholder="City" required>
+                        </fieldset>
+                        <fieldset>
+                            <legend>We accept:</legend>
+                            <div class="card-container">
+                                <div class="card-grupo">
+                                    <input type="radio" class="form-check-input" name="card[]" id="mastercard" required/>
+                                    <label for="mastercard" class="form-label"><i class="fa-brands fa-cc-mastercard"></i></label>
+                                </div>
+                                <div class="card-grupo">
+                                    <input type="radio" class="form-check-input" name="card[]" id="visa" required/>
+                                    <label for="visa" class="form-label"><i class="fa-brands fa-cc-visa"></i></label>
+                                </div>
+                                <div class="card-grupo">
+                                    <input type="radio" class="form-check-input" name="card[]" id="dinersClub" required/>
+                                    <label for="dinersClub" class="form-label"><i class="fa-brands fa-cc-diners-club"></i></label>
+                                </div>
+                                <div class="card-grupo">
+                                    <input type="radio" class="form-check-input" name="card[]" id="paypal">
+                                    <label for="paypal" class="form-label"><i class="fa-brands fa-cc-paypal"></i></label>
+                                </div>
+                            </div>
                         </fieldset>
                     </div>
-                    <fieldset>
-                        <label for="">Message</label>
-                        <textarea name="" id="" cols="30" rows="10" required></textarea>
-                    </fieldset>
+                    <!-- info lateral 2 -->
+                    <div class="col-6">
+                        <fieldset>
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last name" required>
+                        </fieldset>
+                        <div class="row">
+                            <fieldset class="col-12 col-sm-6">
+                                <label for="state" class="form-label">State</label>
+                                <input type="text" class="form-control" name="state" id="state" placeholder="City" required>
+                            </fieldset>
+                            <fieldset class="col-12 col-sm-6">
+                                <label for="postalCode" class="form-label">Postal Code</label>
+                                <input type="text" class="form-control" name="postalCode" id="postalCode" placeholder="City" required>
+                            </fieldset>
+                        </div>
+                        <fieldset>
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="10" required></textarea>
+                            <p class="nota">Add any notes here.</p>
+                        </fieldset>
+                    </div>
                 </div>
             </div>
             <div class="submit-container bg-light">
@@ -89,6 +109,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/f50bb9c937.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
