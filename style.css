@@ -37,8 +37,19 @@ fieldset {
     padding-right: 0;
 }
 
+.row fieldset {
+    margin-bottom: 1em;
+}
+
 .nota {
     color: grey;
+}
+
+.centrado {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 /* main */
@@ -76,6 +87,7 @@ fieldset {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
+    gap: 0.3em;
 }
 
 .amount-input{
@@ -149,4 +161,14 @@ input {
     .row>fieldset:first-child {
         padding: 0;
     }
+}
+
+.formulario-titulo {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.submit-container {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }

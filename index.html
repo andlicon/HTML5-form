@@ -17,8 +17,8 @@
 
 <body>
     <div class="main">
-        <h1 class="h1 formulario-titulo bg-light">Payment form example</h1>
         <form class="formulario needs-validation" action="#" method="POST">
+            <h1 class="h1 formulario-titulo bg-light">Payment form example</h1>
             <!-- info card -->
             <div class="formulario-contenido">
                 <div class="row">
@@ -32,8 +32,8 @@
                     </fieldset>
                     <fieldset class="col-12 col-sm-4">
                         <label for="amount" class="form-label">Amount</label>
-                        <div class="">
-                            <span class="destacar">$</span>
+                        <div class="amount-container">
+                            <span class="destacar centrado">$</span>
                             <input class="amount-input form-control" type="text" name="amount" id="amount" placeholder="Amount" required>
                         </div>
                     </fieldset>
@@ -54,7 +54,7 @@
                             <legend>We accept:</legend>
                             <div class="card-container">
                                 <div class="card-grupo">
-                                    <input type="radio" class="form-check-input" name="card[]" id="mastercard" required/>
+                                    <input type="radio" class="form-check-input" name="card[]" id="mastercard" required checked/>
                                     <label for="mastercard" class="form-label"><i class="fa-brands fa-cc-mastercard"></i></label>
                                 </div>
                                 <div class="card-grupo">
@@ -66,7 +66,7 @@
                                     <label for="dinersClub" class="form-label"><i class="fa-brands fa-cc-diners-club"></i></label>
                                 </div>
                                 <div class="card-grupo">
-                                    <input type="radio" class="form-check-input" name="card[]" id="paypal">
+                                    <input type="radio" class="form-check-input" name="card[]" id="paypal" required>
                                     <label for="paypal" class="form-label"><i class="fa-brands fa-cc-paypal"></i></label>
                                 </div>
                             </div>
